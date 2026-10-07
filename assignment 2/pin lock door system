@@ -1,0 +1,30 @@
+
+#include <stdio.h>
+
+int main()
+{
+    int correct_pin = 9999;
+    int entered_pin;
+
+    printf("Please enter your PIN: ");
+    scanf("%d", &entered_pin);
+
+    if (entered_pin < 1000)
+    {
+        printf("PIN must contain 4 digits. Please enter the correct number of digits.\n");
+    }
+    else if (entered_pin > 9999)
+    {
+        printf("PIN must contain exactly 4 digits. Please enter the correct number of digits.\n");
+    }
+    else if (entered_pin == correct_pin)
+    {
+        printf("Access allowed\n");
+    }
+    else
+    {
+        printf("Incorrect PIN\n");
+    }
+
+    return 0;
+}
