@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int regNo;
+    char name[50];
+    float marks;
+
+    // Input student details
+    printf("Enter Registration Number: ");
+    scanf("%d", &regNo);
+
+    printf("Enter Student Name: ");
+    scanf("%49s", name);
+
+    printf("Enter Student Marks: ");
+    scanf("%f", &marks);
+
+    // Display student details
+    printf("\n===== STUDENT RESULTS =====\n");
+    printf("Registration Number: %d\n", regNo);
+    printf("Student Name: %s\n", name);
+    printf("Marks: %.2f\n", marks);
+
+    // Determine student's grade
+    if (marks >= 70 && marks <= 100) {
+        printf("Grade: A\n");
+    }
+    else if (marks >= 60) {
+        printf("Grade: B\n");
+    }
+    else if (marks >= 50) {
+        printf("Grade: C\n");
+    }
+    else if (marks >= 40) {
+        printf("Grade: D\n");
+    }
+    else if (marks >= 0) {
+        printf("Grade: E (Fail)\n");
+    }
+    else {
+        printf("Invalid Marks!\n");
+    }
+
+    return 0;
+}
